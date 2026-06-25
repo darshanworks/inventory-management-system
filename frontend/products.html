@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Products</title>
+  </head>
+
+  <body class="bg-gray-100">
+    <div id="navbar"></div>
+    <div class="p-8">
+      <h1 class="text-4xl font-bold mb-6">Products</h1>
+
+      <!-- Add Product Form -->
+      <div class="bg-white p-6 rounded shadow mb-8">
+        <h2 class="text-2xl font-bold mb-4">Add Product</h2>
+
+        <form id="productForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input
+            type="text"
+            id="name"
+            placeholder="Product Name"
+            class="w-full p-2 border rounded"
+            required
+          />
+
+          <input
+            type="text"
+            id="category"
+            placeholder="Category"
+            class="w-full p-2 border rounded"
+            required
+          />
+
+          <input
+            type="number"
+            id="price"
+            placeholder="Price"
+            class="w-full p-2 border rounded"
+            required
+          />
+
+          <input
+            type="number"
+            id="quantity"
+            placeholder="Quantity"
+            class="w-full p-2 border rounded"
+            required
+          />
+
+          <select
+            id="supplier_id"
+            class="w-full p-2 border rounded relative z-20"
+            required
+          >
+            <option value="">Select Supplier</option>
+          </select>
+
+          <button type="submit" class="bg-black text-white rounded p-3">
+            Add Product
+          </button>
+        </form>
+      </div>
+
+      <!-- Search & Filter -->
+      <div class="mb-6">
+        <div class="flex flex-col md:flex-row gap-4">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Products..."
+            class="flex-1 p-3 border rounded"
+          />
+
+          <div class="flex gap-4">
+            <button
+              id="lowStockBtn"
+              class="flex-1 md:flex-none bg-red-400 text-white px-6 py-3 rounded"
+            >
+              Low Stock
+            </button>
+
+            <button
+              id="showAllBtn"
+              class="flex-1 md:flex-none bg-black text-white px-6 py-3 rounded"
+            >
+              Show All
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Product List -->
+      <div
+        id="productList"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      ></div>
+    </div>
+    <div
+      id="toast"
+      class="fixed top-5 right-5 hidden px-6 py-3 rounded text-white shadow-lg z-50"
+    ></div>
+    <script src="./js/toast.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/navbar.js"></script>
+  </body>
+</html>

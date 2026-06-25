@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Transactions</title>
+  </head>
+
+  <body class="bg-gray-100">
+    <div id="navbar"></div>
+    <div class="p-8">
+      <h1 class="text-4xl font-bold mb-6">Transactions</h1>
+
+      <!-- Add Transaction -->
+      <div class="bg-white p-6 rounded shadow mb-8">
+        <h2 class="text-2xl font-bold mb-4">Add Transaction</h2>
+
+        <form
+          id="transactionForm"
+          class="grid grid-cols-1 md:grid-cols-2 gap-4"
+        >
+          <!-- Product Dropdown -->
+          <select id="product_id" class="w-full p-2 border rounded" required>
+            <option value="">Select Product</option>
+          </select>
+
+          <!-- Type -->
+          <select
+            id="type"
+            class="w-full p-2 border rounded relative z-20"
+            required
+          >
+            <option value="">Select Type</option>
+
+            <option value="IN">Stock IN</option>
+
+            <option value="OUT">Stock OUT</option>
+          </select>
+
+          <!-- Quantity -->
+          <input
+            type="number"
+            id="quantity"
+            placeholder="Quantity"
+            class="w-full p-2 border rounded"
+            required
+          />
+
+          <button type="submit" class="bg-black text-white p-3 rounded">
+            Add Transaction
+          </button>
+        </form>
+      </div>
+      <button id="exportBtn" class="bg-green-500 text-white px-4 py-2 mb-2">
+        Export Excel
+      </button>
+      <button id="exportPdfBtn" class="bg-red-500 text-white px-4 py-2 rounded">
+        Export PDF
+      </button>
+      <!-- Transaction List -->
+      <div
+        id="transactionList"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      ></div>
+    </div>
+    <div
+      id="toast"
+      class="fixed top-5 right-5 hidden px-6 py-3 rounded text-white shadow-lg z-50"
+    ></div>
+    <script src="./js/toast.js"></script>
+    <script src="./js/transactions.js"></script>
+    <script src="./js/navbar.js"></script>
+  </body>
+</html>
