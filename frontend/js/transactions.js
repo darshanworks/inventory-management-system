@@ -4,16 +4,20 @@ if (!token) {
   window.location.href = "index.html";
 }
 
-const API_URL = "http://localhost:5000/api/transactions";
+const API_URL =
+  "https://inventory-management-system-production-c6af.up.railway.app/api/transactions";
 
 // LOAD PRODUCTS
 const loadProducts = async () => {
   try {
-    const response = await fetch("http://localhost:5000/api/products", {
-      headers: {
-        Authorization: `Bearer ${token}`,
+    const response = await fetch(
+      "https://inventory-management-system-production-c6af.up.railway.app/api/products",
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       },
-    });
+    );
 
     const products = await response.json();
 
@@ -139,7 +143,7 @@ document
 document.getElementById("exportBtn").addEventListener("click", async () => {
   try {
     const response = await fetch(
-      "http://localhost:5000/api/transactions/export",
+      "https://inventory-management-system-production-c6af.up.railway.app/api/transactions/export",
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -172,7 +176,7 @@ document.getElementById("exportBtn").addEventListener("click", async () => {
 document.getElementById("exportPdfBtn").addEventListener("click", async () => {
   try {
     const response = await fetch(
-      "http://localhost:5000/api/transactions/export-pdf",
+      "https://inventory-management-system-production-c6af.up.railway.app/api/transactions/export-pdf",
       {
         headers: {
           Authorization: `Bearer ${token}`,

@@ -57,10 +57,10 @@ https://darshanworks.github.io/savora-restaurant-website/
 inventory-management-system
 │
 ├── backend
-│   ├── config
-│   ├── controllers
-│   ├── middleware
-│   ├── routes
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── routes/
 │   ├── node_modules
 │   ├── .env
 │   ├── package.json

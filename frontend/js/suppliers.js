@@ -4,7 +4,8 @@ if (!token) {
   window.location.href = "index.html";
 }
 
-const API_URL = "http://localhost:5000/api/suppliers";
+const API_URL =
+  "https://inventory-management-system-production-c6af.up.railway.app/api/suppliers";
 
 // Fetch Suppliers
 const fetchSuppliers = async () => {
