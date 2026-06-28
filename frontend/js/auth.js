@@ -8,21 +8,18 @@ loginForm.addEventListener("submit", async (e) => {
   const password = document.getElementById("password").value;
 
   try {
-    const response = await fetch(
-      "https://inventory-management-system-production-c6af.up.railway.app/api/auth/login",
-      {
-        method: "POST",
+    const response = await fetch(`${BASE_URL}/api/auth/login`, {
+      method: "POST",
 
-        headers: {
-          "Content-Type": "application/json",
-        },
-
-        body: JSON.stringify({
-          email,
-          password,
-        }),
+      headers: {
+        "Content-Type": "application/json",
       },
-    );
+
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    });
 
     const data = await response.json();
 

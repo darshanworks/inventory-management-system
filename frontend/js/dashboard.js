@@ -8,14 +8,11 @@ if (!token) {
 // FETCH DASHBOARD DATA
 const fetchDashboard = async () => {
   try {
-    const response = await fetch(
-      "https://inventory-management-system-production-c6af.up.railway.app/api/dashboard",
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+    const response = await fetch(`${BASE_URL}/api/dashboard`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-    );
+    });
 
     const data = await response.json();
 
@@ -137,14 +134,11 @@ const createTransactionChart = (transactions) => {
 
 const fetchProductsForChart = async () => {
   try {
-    const response = await fetch(
-      "https://inventory-management-system-production-c6af.up.railway.app/api/products",
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+    const response = await fetch(`${BASE_URL}/api/products`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-    );
+    });
 
     const products = await response.json();
 
@@ -156,14 +150,11 @@ const fetchProductsForChart = async () => {
 
 const fetchTransactionsForChart = async () => {
   try {
-    const response = await fetch(
-      "https://inventory-management-system-production-c6af.up.railway.app/api/transactions",
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+    const response = await fetch(`${BASE_URL}/api/transactions`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-    );
+    });
 
     const transactions = await response.json();
 
@@ -176,14 +167,11 @@ const fetchTransactionsForChart = async () => {
 // FETCH RECENT TRANSACTIONS
 const fetchRecentTransactions = async () => {
   try {
-    const response = await fetch(
-      "https://inventory-management-system-production-c6af.up.railway.app/api/transactions",
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+    const response = await fetch(`${BASE_URL}/api/transactions`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-    );
+    });
 
     const transactions = await response.json();
 

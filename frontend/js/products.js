@@ -7,19 +7,15 @@ let allProducts = [];
 let currentSearch = "";
 
 let lowStockMode = false;
-const API_URL =
-  "https://inventory-management-system-production-c6af.up.railway.app/api/products";
+const API_URL = `${BASE_URL}/api/products`;
 
 const loadSuppliers = async () => {
   try {
-    const response = await fetch(
-      "https://inventory-management-system-production-c6af.up.railway.app/api/suppliers",
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+    const response = await fetch(`${BASE_URL}/api/suppliers`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-    );
+    });
 
     const suppliers = await response.json();
 
