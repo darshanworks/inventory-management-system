@@ -20,7 +20,7 @@ A modern full-stack Inventory Management System designed to help businesses effi
 ## 🌐 Live Demo
 
 ```bash
-https://darshanworks.github.io/savora-restaurant-website/
+https://inventory-management-system-nu-rose.vercel.app/
 ```
 
 ---
@@ -69,6 +69,7 @@ inventory-management-system
 ├── frontend
 │    ├── js/
 │    │   ├── auth.js
+│    │   ├── config.js
 │    │   ├── dashboard.js
 │    │   ├── navbar.js
 │    │   ├── products.js
@@ -99,7 +100,7 @@ inventory-management-system
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/inventory-management-system.git
+git clone https://github.com/darshanworks/inventory-management-system.git
 ```
 
 ### Navigate to Project Folder
@@ -151,10 +152,10 @@ CREATE DATABASE inventory_db;
 
 ## 📌 Future Improvements
 
-Dark Mode
-Pagination
-Email Notifications
-Cloud Deployment
+- Dark Mode
+- Pagination
+- Email Notifications
+- Cloud Deployment
 
 ## Author
 
